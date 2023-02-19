@@ -32,9 +32,9 @@ class MainVC: NSViewController, QLPreviewingController {
 
 	private func setUpView() {
 		// Draw border around previews, in similar style to macOS's default previews
-		view.wantsLayer = true
-		view.layer?.borderWidth = 1
-		view.layer?.borderColor = NSColor.tertiaryLabelColor.cgColor
+//		view.wantsLayer = true
+//		view.layer?.borderWidth = 1
+//		view.layer?.borderColor = NSColor.tertiaryLabelColor.cgColor
 	}
 
 	/// Function responsible for generating file previews. It's called for previews in Finder,
