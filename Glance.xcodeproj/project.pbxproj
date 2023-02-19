@@ -842,7 +842,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ./HTMLConverter/\ngo build --buildmode=c-archive -ldflags \"-s -w\" -o ./htmlconverter.a\n";
+			shellScript = "cd ./HTMLConverter/\nCGO_ENABLED=1 GOOS=darwin GOARCH=amd64 go build --buildmode=c-archive -ldflags \"-s -w\" -o ./htmlconverter-amd64.a\nCGO_ENABLED=1 GOOS=darwin GOARCH=arm64 go build --buildmode=c-archive -ldflags \"-s -w\" -o ./htmlconverter-arm64.a\nlipo ./htmlconverter-amd64.a ./htmlconverter-arm64.a -create -output ./htmlconverter.a\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
